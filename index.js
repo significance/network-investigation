@@ -9,7 +9,7 @@ let main = async function(){
 	chunks.forEach(async (chunk, i)=>{
 		await delay(300*i)
 		try {
-			let url = `http://15.237.115.132:1633/chunks/${chunk.address}`;
+			let url = `http://localhost:1633/chunks/${chunk.address}`;
 			// console.log(url)
 			let r = await axios.get(url);
 			console.log(i, chunk.address, r.status);
